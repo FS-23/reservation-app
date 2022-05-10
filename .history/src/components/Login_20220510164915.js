@@ -5,13 +5,11 @@ export default function Login(){
     const myStyle = {width: "400px" , margin: "auto"}
 
     let [username , setUsername] = useState('')
-    let [password , setPassword] = useState('')
 
     const navigate = useNavigate()
 
     function handleOnSubmit(event){
          event.preventDefault()
-         console.log({username , password})
          navigate('/')
     }
 
@@ -38,12 +36,8 @@ export default function Login(){
                          type="text" 
                          className="form-control" 
                          placeholder="Mot de passe"
-                         onChange={(event) => {
-                            setPassword(event.target.value)
-                        }}
                          name="password"/>
                  </div>
-                 {password}
                  <div className="mt-3">
                       <button className="btn btn-outline-primary">Connecter</button>
                  </div>

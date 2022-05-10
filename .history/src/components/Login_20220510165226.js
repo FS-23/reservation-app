@@ -12,7 +12,7 @@ export default function Login(){
     function handleOnSubmit(event){
          event.preventDefault()
          console.log({username , password})
-         navigate('/')
+       //  navigate('/')
     }
 
    

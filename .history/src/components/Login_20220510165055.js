@@ -11,7 +11,6 @@ export default function Login(){
 
     function handleOnSubmit(event){
          event.preventDefault()
-         console.log({username , password})
          navigate('/')
     }
 
@@ -31,7 +30,6 @@ export default function Login(){
                          }}
                          name="username"/>
                  </div>
-                 {username}
                  <div className="form-group mt-3">
                      <label className="form-label">Mot de passe</label>
                      <input  
