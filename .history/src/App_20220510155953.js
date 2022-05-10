@@ -6,7 +6,6 @@ import ReservationItem from "./components/ReservationItem";
 import AddReservation from "./components/AddReservation";
 import ReservationList from "./components/ReservationList";
 import Home from "./components/Home";
-import Reservation from "./components/Reservation";
 
 import {BrowserRouter , Routes , Route, Outlet} from 'react-router-dom'
 
@@ -18,10 +17,11 @@ function App() {
               <Route path="/login" element={ <Login />}></Route>
               <Route path="/" element={ <Layout />}>
                    <Route index element={<Home />}></Route>
-                   <Route path="reservations" element={<Reservation />}>
-                      <Route index element={<ReservationList />}></Route>
-                      <Route path="detail" element={<ReservationDetail />}></Route>
-                      <Route path="add" element={<AddReservation />}></Route>
+                   <Route path="reservation" element={<Home />}>
+                      <Route path="/list" element={<ReservationList />}></Route>
+                      <Route path="/detail" element={<ReservationDetail />}></Route>
+                      <Route path="/add" element={<AddReservation />}></Route>
+                      <Outlet />
                    </Route>       
               </Route>
           </Routes>

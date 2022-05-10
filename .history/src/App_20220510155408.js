@@ -6,9 +6,8 @@ import ReservationItem from "./components/ReservationItem";
 import AddReservation from "./components/AddReservation";
 import ReservationList from "./components/ReservationList";
 import Home from "./components/Home";
-import Reservation from "./components/Reservation";
 
-import {BrowserRouter , Routes , Route, Outlet} from 'react-router-dom'
+import {BrowserRouter , Routes , Route} from 'react-router-dom'
 
 function App() {
   return (
@@ -17,12 +16,10 @@ function App() {
            <Routes>
               <Route path="/login" element={ <Login />}></Route>
               <Route path="/" element={ <Layout />}>
-                   <Route index element={<Home />}></Route>
-                   <Route path="reservations" element={<Reservation />}>
-                      <Route index element={<ReservationList />}></Route>
-                      <Route path="detail" element={<ReservationDetail />}></Route>
-                      <Route path="add" element={<AddReservation />}></Route>
-                   </Route>       
+                 
+                   <Route path="/reservations" element={<Reservation />}>
+                    
+                   </Route>                    
               </Route>
           </Routes>
     </BrowserRouter>
