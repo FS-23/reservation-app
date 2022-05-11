@@ -11,7 +11,6 @@ export function getReservation(id){
 export function addReservation(reservation){
     reservation.id = reservations.length + 1
     reservation.reference = (new Date()).getTime()
-    reservation.price = 50
     reservations.push(reservation)
     return reservations
 }

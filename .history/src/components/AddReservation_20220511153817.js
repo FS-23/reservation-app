@@ -41,7 +41,6 @@ export default function AddReservation(){
                             name = "from"
                             onChange={handleOnChange}
                             className="form-control">
-                                <option value="" selected> Selectionner</option>
                                 {
                                     airports.map((item , index) => <option key={index} value={item}>{item}</option>)
                                 }
@@ -56,7 +55,6 @@ export default function AddReservation(){
                             onChange={handleOnChange}
                             
                             className="form-control">
-                                <option value="" selected> Selectionner</option>
                                 {
                                     airports.map((item , index) => <option key={index} value={item}>{item}</option>)
                                 }
@@ -75,7 +73,6 @@ export default function AddReservation(){
                     <div className="form-group mt-2">
                             <label className="form-label">Class</label>
                             <select required onChange={handleOnChange} name = "classType" className="form-control">
-                                <option value="" selected> Selectionner</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>

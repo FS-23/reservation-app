@@ -4,8 +4,8 @@
 }
 
 .reservation-item:hover {
-   animation: animToTop 1s ease-in-out;
-   
+   animation: animToTop 2s ease-in-out;
+   background-color: yellow;
 }
 
 
@@ -13,12 +13,11 @@
 @keyframes animToTop {
 
    from{
-     top: 0;
+     top: -20px
    }
 
    to{
-     top:-20px;
-
+     top:0
    }
   
 }

@@ -13,12 +13,11 @@
 @keyframes animToTop {
 
    from{
-     top: 0;
+     top: 0
    }
 
    to{
-     top:-20px;
-
+     top:-20px
    }
   
 }

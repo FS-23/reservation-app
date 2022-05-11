@@ -16,7 +16,7 @@ function ReservationList() {
            <div className='row mx-0 mb-5'>
             {
                 reservations.map((item , index) => (
-                    <div key={item.id} className=" col-12 col-sm-6 col-lg-4 col-xxl-4 mt-2 reservation-item">
+                    <div key={item.id} className=" col-6 col-sm-4 col-lg-3 col-xxl-2 mt-2 reservation-item">
                         <div className="bg-dark text-white p-2 rounded shadow-lg">
                             <h4>RV-{item.reference} <button className='btn btn-info btn-sm ms-3'>{item.price} MAD</button></h4>
                             <div className='row mt-3'>

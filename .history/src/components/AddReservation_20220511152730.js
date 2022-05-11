@@ -21,7 +21,7 @@ export default function AddReservation(){
       function handleOnSubmit(event){
           event.preventDefault()
           console.log('inputs:', inputs)
-          inputs.date = inputs.date.replace('T', ' ')
+          inputs.date.replace('T', ' ')
           addReservation(inputs)
           navigate('/reservations')
          
@@ -37,11 +37,9 @@ export default function AddReservation(){
                     <div className="form-group mt-4">
                             <label className="form-label">Aéroport départ</label>
                             <select 
-                            required
                             name = "from"
                             onChange={handleOnChange}
                             className="form-control">
-                                <option value="" selected> Selectionner</option>
                                 {
                                     airports.map((item , index) => <option key={index} value={item}>{item}</option>)
                                 }
@@ -51,12 +49,10 @@ export default function AddReservation(){
                     <div className="form-group mt-2">
                             <label className="form-label">Destination</label>
                             <select 
-                            required
                             name="to"
                             onChange={handleOnChange}
                             
                             className="form-control">
-                                <option value="" selected> Selectionner</option>
                                 {
                                     airports.map((item , index) => <option key={index} value={item}>{item}</option>)
                                 }
@@ -65,20 +61,19 @@ export default function AddReservation(){
                 
                     <div className="form-group mt-2">
                             <label className="form-label">Date départ</label>
-                            <input required onChange={handleOnChange} name="date" className="form-control" type="datetime-local"/>
+                            <input onChange={handleOnChange} name="date" className="form-control" type="datetime-local"/>
                     </div>
                     <div className="form-group mt-2">
                             <label className="form-label">Nombre de passagers</label>
-                            <input required onChange={handleOnChange} name="nbrPassengers" className="form-control" type="number"  min="1" max="3"/>
+                            <input onChange={handleOnChange} name="nbrPassengers" className="form-control" type="number"  min="1" max="3"/>
                     </div>
 
                     <div className="form-group mt-2">
                             <label className="form-label">Class</label>
-                            <select required onChange={handleOnChange} name = "classType" className="form-control">
-                                <option value="" selected> Selectionner</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                            <select onChange={handleOnChange} name = "classType" className="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
                             </select>
                     </div>
 
