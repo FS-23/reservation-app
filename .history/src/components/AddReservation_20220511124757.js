@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { addReservation  , getReservations} from "../APIS/Reservation";
+import { addReservation } from "../APIS/Reservation";
 
 export default function AddReservation(){
     /* utilisation des state pour recuperer les valeurs des inputs */
@@ -20,7 +20,10 @@ export default function AddReservation(){
           event.preventDefault()
           console.log('inputs:', inputs)
           addReservation(inputs)
-          console.log('reservations:', getReservations())
+
+
+
+          console.log('reservations:', )
       }
 
      

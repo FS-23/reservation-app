@@ -10,7 +10,7 @@ function ReservationList() {
     return (
        <div>
            {
-             //  reservations.length == 0 ? "Chargement en cours...." :  reservations.map((.....))
+               reservations.length == 0 ? "Chargement en cours...." :  reservations.map((.....))
            }
        </div>
     )

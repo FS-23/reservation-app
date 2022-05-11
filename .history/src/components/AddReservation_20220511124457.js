@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { addReservation  , getReservations} from "../APIS/Reservation";
+import { addReservation } from "../APIS/Reservation";
 
 export default function AddReservation(){
     /* utilisation des state pour recuperer les valeurs des inputs */
@@ -19,8 +19,6 @@ export default function AddReservation(){
       function handleOnSubmit(event){
           event.preventDefault()
           console.log('inputs:', inputs)
-          addReservation(inputs)
-          console.log('reservations:', getReservations())
       }
 
      
@@ -29,7 +27,7 @@ export default function AddReservation(){
      return (
               <div className="w-50 m-auto mt-5 shadow-sm p-3">
                    <h5>Nouvelle reservation</h5>
-                   <form onSubmit={handleOnSubmit}>
+                   <form>
                    <div className="form-group mt-4">
                         <label className="form-label">Aéroport départ</label>
                         <select 

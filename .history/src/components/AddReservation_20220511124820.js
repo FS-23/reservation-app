@@ -20,6 +20,9 @@ export default function AddReservation(){
           event.preventDefault()
           console.log('inputs:', inputs)
           addReservation(inputs)
+         
+
+
           console.log('reservations:', getReservations())
       }
 

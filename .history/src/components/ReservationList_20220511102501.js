@@ -6,13 +6,9 @@ function ReservationList() {
     useEffect(()=>{
         let datas =getReservations()
         setReservations(datas)
-    },[])
+    })
     return (
-       <div>
-           {
-             //  reservations.length == 0 ? "Chargement en cours...." :  reservations.map((.....))
-           }
-       </div>
+       <div>Rservation list</div>
     )
 }
 
